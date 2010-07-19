@@ -1,0 +1,9 @@
+todo
+---
+
+
+requirements
+---
+image upload requires PIL (http://www.pythonware.com/products/pil/)
+thumbnails from http://djangothumbnails.com/
+pip install django-tinymce
