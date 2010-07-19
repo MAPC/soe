@@ -11,8 +11,8 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
+        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'C:\dev\django\soe\db\soe.sqlite',                      # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -27,7 +27,7 @@ DATABASES = {
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'America/New_York'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -45,12 +45,12 @@ USE_L10N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = ''
+MEDIA_ROOT = 'C:/dev/django/soe/media/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = ''
+MEDIA_URL = 'http://127.0.0.1/soe/media/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -90,5 +90,26 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    'django.contrib.admin',
+    'indicators',
+    'tinymce',
 )
+
+# TinyMCE config 
+
+# http://wiki.moxiecode.com/index.php/TinyMCE:Configuration
+TINYMCE_DEFAULT_CONFIG = {
+    'theme': "advanced", 
+    'relative_urls': False,
+    'theme_advanced_toolbar_location': "top",
+    'theme_advanced_toolbar_align' : "left",
+    'theme_advanced_buttons1' : "bold,italic,underline,sub,sup,bullist,numlist,outdent,indent,link,unlink,styleselect,formatselect,removeformat,code",
+    'theme_advanced_buttons2' : "",
+    'theme_advanced_buttons3' : "",
+    'theme_advanced_blockformats' : "p,h1,h2,h3",
+    'theme_advanced_styles' : "Header 1=header1;Header 2=header2;Header 3=header3;Table Row=tableRow1",
+    'width' : "600",
+    'height' : "400",
+}
+
+# theme_advanced_toolbar_location : "top"
