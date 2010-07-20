@@ -106,10 +106,15 @@ TINYMCE_DEFAULT_CONFIG = {
     'theme_advanced_buttons1' : "bold,italic,underline,sub,sup,bullist,numlist,outdent,indent,link,unlink,styleselect,formatselect,removeformat,code",
     'theme_advanced_buttons2' : "",
     'theme_advanced_buttons3' : "",
-    'theme_advanced_blockformats' : "p,h1,h2,h3",
-    'theme_advanced_styles' : "Header 1=header1;Header 2=header2;Header 3=header3;Table Row=tableRow1",
+    'theme_advanced_blockformats' : "p,div,h4",
+    'theme_advanced_styles' : "Learn more text=learnmoretxt;Learn more link=learnmore;Notice=notice",
     'width' : "600",
     'height' : "400",
+    'content_css' : MEDIA_URL + 'css/custom_content.css'
+#    'style_formats' : [
+#        {'title' : 'Learn more text', 'block' : 'div'},
+#        {'title' : 'notice', 'block' : 'div'}
+#    ]
 }
 
 # theme_advanced_toolbar_location : "top"
