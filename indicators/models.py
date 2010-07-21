@@ -1,14 +1,22 @@
 from django.db import models
 from soe.indicators.thumbs import ImageWithThumbsField
 from tinymce import models as tinymce_models
+from django.template.defaultfilters import slugify
+
 # Create your models here.
 
 class TopicArea(models.Model):
     title = models.CharField(max_length=50)
+    slug = models.SlugField('URL slug',max_length=50)
     overview = tinymce_models.HTMLField(null=True, blank=True)
     order = models.IntegerField(null=True, blank=True)
     pub = models.BooleanField('Published')
     last_modified = models.DateTimeField(editable=False, auto_now=True)
+    
+    # slugify
+#    def save(self, *args, **kwargs):
+#        self.slug = slugify(self.title)
+#        super(Indicator, self).save(*args, **kwargs)
     
     # So the model is pluralized correctly in the admin.
     class Meta:
@@ -17,16 +25,21 @@ class TopicArea(models.Model):
     # Returns the string representation of the model.
     def __unicode__(self):
         return self.title
-
     
 class Indicator(models.Model):
     topicarea = models.ForeignKey('indicators.Topicarea')
     title = models.CharField(max_length=50)
+    slug = models.SlugField('URL slug',max_length=50)
     findings = tinymce_models.HTMLField(null=True, blank=True)
     impoimpl = tinymce_models.HTMLField('Importance and Implications', null=True, blank=True)
     order = models.IntegerField(null=True, blank=True)
     pub = models.BooleanField('Published')
     last_modified = models.DateTimeField(editable=False, auto_now=True)
+    
+    # slugify
+#    def save(self, *args, **kwargs):
+#        self.slug = slugify(self.title)
+#        super(Indicator, self).save(*args, **kwargs)
     
     # So the model is pluralized correctly in the admin.
     class Meta:
@@ -35,8 +48,7 @@ class Indicator(models.Model):
     # Returns the string representation of the model.
     def __unicode__(self):
         return self.title
-    
-    
+  
 class Graph(models.Model):
     topicarea = models.ForeignKey('indicators.TopicArea', null=True, blank=True)
     indicator = models.ForeignKey('indicators.Indicator', null=True, blank=True)
