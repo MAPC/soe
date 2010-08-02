@@ -2,14 +2,14 @@ from soe.indicators.models import TopicArea, Indicator, Graph, Reference
 from django.contrib import admin
 
 class TopicAreaAdmin(admin.ModelAdmin):
-    list_display = ('title',)
+    list_display = ('title','pub')
     # list_filter = ['topicarea', 'inidcator']
     date_hierarchy = 'last_modified'
     search_fields = ['title']
     prepopulated_fields = {'slug': ('title',)}
 
 class IndicatorAdmin(admin.ModelAdmin):
-    list_display = ('title','topicarea')
+    list_display = ('title','topicarea','pub')
     # list_filter = ['topicarea', 'inidcator']
     date_hierarchy = 'last_modified'
     search_fields = ['title']

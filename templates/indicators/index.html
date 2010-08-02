@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block indicator_title %}
+
+	<h2 class="general">Welcome</h2>
+
+{% endblock %}
+
+{% block menu %}
+
+{% for topicarea in topicareas %}
+
+<h4 class="{{ topicarea.slug }}"><a href="{{ base_url }}{{ topicarea.slug }}" title="{{ topicarea.title }}">{{ topicarea.title }}</a></h4>
+
+</ul>
+
+{% endfor %}
+
+{% endblock %}
+
+{% block content %}
+									
+	<p>...to the State Of Equity report.</p>
+		  			
+{% endblock %}

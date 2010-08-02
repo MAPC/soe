@@ -1,0 +1,184 @@
+html {
+	overflow-y: scroll; 
+} 
+
+.loginfo {
+	float: right;
+}
+
+#footer	{
+    background: #ffffff;
+
+    /* over-ride sticky-footer.css - http://cfc.kizzx2.com/index.php/blueprint-css-with-sticky-footer-revisited/ */
+    padding-top: 20px;
+    height: 60px;
+    margin-top: -80px;
+	text-align: right;
+}
+
+/* vertical scrollbar always on, no jumps */
+html {
+	overflow-y: scroll; 
+}  
+
+body {
+	padding-top: 10px;
+}
+
+a[target="_blank"] { 
+	background: url("/stateofequity/images/external.png") center right no-repeat;
+	padding-right: 13px;
+}
+
+#head {
+	margin-bottom: 18px;
+}
+
+#head img {
+	float: left;
+	margin-right: 40px;
+}
+
+#head h1 {
+	margin-top: 22px;
+	color: rgb(15,64,132);
+}
+
+#head h1 a {
+	text-decoration: none;
+	color: rgb(15,64,132);
+}
+
+.draft {
+	color: silver;
+	font-variant: small-caps;
+}
+
+h2 {
+	background-color: silver;
+}
+
+h2.demographics {
+	background-color: rgb(102,45,145);
+}
+h2.economy {
+	background-color: rgb(0,104,55);
+}
+h2.education {
+	background-color: rgb(237,28,36);
+}
+h2.environment-and-recreation {
+	background-color: rgb(140,198,63);
+}
+h2.housing {
+	background-color: rgb(117,76,36);
+}
+h2.public-health {
+	background-color: rgb(0,78,156);
+}
+h2.public-safety {
+	background-color: rgb(247,147,30);
+}
+h2.civic-vitality {
+	background-color: rgb(0,0,0);
+}
+h2.transportation {
+	background-color: rgb(254,254,34);
+}
+
+h2 {
+	padding: 0 5px;
+}
+
+#content td {
+	border: solid 1px #222;
+}
+
+div.notice p {
+	margin-bottom: 0px;
+}
+
+#menu h4 {
+	font-size: 1em;
+	margin-bottom: 1px;
+	margin-left: 5px;
+	padding: 4px 0 4px 5px;
+}
+
+#menu a {
+	text-decoration: none;
+	color: #222;
+}
+
+#menu a:hover {
+	text-decoration: underline;
+	color: #009;
+}
+
+#menu ul {
+	list-style-type: none;
+	padding-left: 0;
+	margin-bottom: 8px;
+}
+
+#menu ul li {
+	margin-left: 15px;
+}
+
+h4 {
+	border-left: solid 5px silver;
+}
+h4.demographics {
+	border-left: solid 5px rgb(102,45,145);
+}
+h4.economy {
+	border-left: solid 5px rgb(0,104,55);
+}
+h4.education {
+	border-left: solid 5px rgb(237,28,36);
+}
+h4.environment-and-recreation {
+	border-left: solid 5px rgb(140,198,63);
+}
+h4.housing {
+	border-left: solid 5px rgb(117,76,36);
+}
+h4.public-health {
+	border-left: solid 5px rgb(0,78,156);
+}
+h4.public-safety {
+	border-left: solid 5px rgb(247,147,30);
+}
+h4.civic-vitality {
+	border-left: solid 5px rgb(0,0,0);
+}
+h4.transportation {
+	border-left: solid 5px rgb(254,254,34);
+}
+
+#imagecol img {
+	max-width: 220px;
+	margin-bottom: 18px;
+}
+
+li.active {
+	font-weight: bold;
+}
+
+.footnote, .reference {
+	font-size: xx-small;
+	vertical-align: top;
+}
+
+div.footnotes {
+	border-top: 1px solid #000;
+	padding-top: 18px;
+}
+
+div.footnotes p {
+	margin-bottom: 6px;
+}
+
+div.footnotes p a.footnote {
+	text-decoration: none;
+}
