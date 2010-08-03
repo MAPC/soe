@@ -17,8 +17,10 @@
 				
 	{% for graph in active_topicarea.graph_set.all %}
 		
-		<a href="{{ graph.photo.url }}" title="{{ graph.title }}"><img src="{{ graph.photo.url_125x125 }}" alt="{{ graph.title }}"></a>
-		{{ graph.caption }}
+		<a href="{{ graph.img.url }}" title="{{ graph.title }}"><img src="{{ graph.img.url_220x440 }}" alt="{{ graph.title }}"></a>
+		<p class="small">
+			{{ graph.title }}: <span class="caption">{{ graph.caption }}</span>
+		</p>
 	
 	{% endfor %}
 					

@@ -1,4 +1,5 @@
 $(document).ready(function() {	
+
 	// hide all the sub-menus
 	// $("h4.toggle").next().hide();
 	
@@ -13,10 +14,11 @@ $(document).ready(function() {
 	
 	// add a click function that toggles the sub-menu when the corresponding
 	// span element is clicked
-	// $("h4.toggle").click(function() {
+	/* 
+	$("h4.toggle").click(function() {
 		$(this).next().toggle(500);
 	}); 
-	
+	*/
 	// lightbox effect: 
 	$("#imagecol a").lightBox();
 	
