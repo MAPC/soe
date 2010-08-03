@@ -118,3 +118,5 @@ TINYMCE_DEFAULT_CONFIG = {
 }
 
 # theme_advanced_toolbar_location : "top"
+
+BASE_URL = '/'
