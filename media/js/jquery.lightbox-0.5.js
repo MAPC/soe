@@ -27,11 +27,11 @@
 			// Configuration related to navigation
 			fixedNavigation:		false,		// (boolean) Boolean that informs if the navigation (next and prev button) will be fixed or not in the interface.
 			// Configuration related to images
-			imageLoading:			'/stateofequity/images/lightbox-ico-loading.gif',		// (string) Path and the name of the loading icon
-			imageBtnPrev:			'/stateofequity/images/lightbox-btn-prev.gif',			// (string) Path and the name of the prev button image
-			imageBtnNext:			'/stateofequity/images/lightbox-btn-next.gif',			// (string) Path and the name of the next button image
-			imageBtnClose:			'/stateofequity/images/lightbox-btn-close.gif',		// (string) Path and the name of the close btn
-			imageBlank:				'/stateofequity/images/lightbox-blank.gif',			// (string) Path and the name of a blank image (one pixel)
+			imageLoading:			'http://localhost/soe/media/img/lightbox-ico-loading.gif',		// (string) Path and the name of the loading icon
+			imageBtnPrev:			'http://localhost/soe/media/img/lightbox-btn-prev.gif',			// (string) Path and the name of the prev button image
+			imageBtnNext:			'http://localhost/soe/media/img/lightbox-btn-next.gif',			// (string) Path and the name of the next button image
+			imageBtnClose:			'http://localhost/soe/media/img/lightbox-btn-close.gif',		// (string) Path and the name of the close btn
+			imageBlank:				'http://localhost/soe/media/img/lightbox-blank.gif',			// (string) Path and the name of a blank image (one pixel)
 			// Configuration related to container image box
 			containerBorderSize:	10,			// (integer) If you adjust the padding in the CSS for the container, #lightbox-container-image-box, you will need to update this value
 			containerResizeSpeed:	400,		// (integer) Specify the resize duration of container image. These number are miliseconds. 400 is default.
