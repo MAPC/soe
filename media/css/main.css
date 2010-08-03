@@ -156,6 +156,10 @@ h4.transportation {
 	border-left: solid 5px rgb(254,254,34);
 }
 
+h4.active {
+	font-weight: bold;
+}
+
 #imagecol img {
 	max-width: 220px;
 	margin-bottom: 18px;

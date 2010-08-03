@@ -57,7 +57,38 @@
 			
 			<div class="span-5" id="menu">
 				
-				{% block menu %}{% endblock %}
+				{% block menu %}
+				
+					{% for topicarea in topicareas %}
+	
+					{% if topicarea.id == active_topicarea.id %}
+						
+						<h4 class="{{ topicarea.slug }} active"><a href="{{ base_url }}{{ topicarea.slug }}" title="{{ topicarea.title }}">{{ topicarea.title }}</a></h4>
+						<ul>
+						{% for indicator in topicarea.indicator_set.all %}
+						
+							{% if indicator.id == active_indicator.id %}
+							
+								<li class="active"><a href="{{ base_url }}{{ topicarea.slug }}/{{ indicator.slug }}" title="{{ indicator.title }}">{{ indicator.title }}</a></li>
+							
+							{% else %}
+							
+								<li><a href="{{ base_url }}{{ topicarea.slug }}/{{ indicator.slug }}" title="{{ indicator.title }}">{{ indicator.title }}</a></li>
+							
+							{% endif %}
+							
+						{% endfor %}
+						</ul>
+					
+					{% else %}
+				
+						<h4 class="{{ topicarea.slug }}"><a href="{{ base_url }}{{ topicarea.slug }}" title="{{ topicarea.title }}">{{ topicarea.title }}</a></h4>
+					
+					{% endif %}
+				
+				{% endfor %}
+				
+				{% endblock %}
 				
 				<h4 class="general">Reference and Navigation</h4>
 				

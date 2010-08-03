@@ -7,33 +7,20 @@
 
 {% endblock %}
 
-{% block menu %}
-
-	{% for topicarea in topicareas %}
-	
-		{% if topicarea.id == active_topicarea.id %}
-			
-			<h4 class="{{ topicarea.slug }}"><a href="{{ base_url }}{{ topicarea.slug }}" title="{{ topicarea.title }}">{{ topicarea.title }}</a></h4>
-			<ul>
-			{% for indicator in topicarea.indicator_set.all %}
-				
-				<li><a href="{{ base_url }}{{ topicarea.slug }}/{{ indicator.slug }}" title="{{ indicator.title }}">{{ indicator.title }}</a></li>
-			
-			{% endfor %}
-			</ul>
-		
-		{% else %}
-	
-			<h4 class="{{ topicarea.slug }}"><a href="{{ base_url }}{{ topicarea.slug }}" title="{{ topicarea.title }}">{{ topicarea.title }}</a></h4>
-		
-		{% endif %}
-	
-	{% endfor %}
-
-{% endblock %}
-
 {% block content %}
-									
+								
 	{{ active_topicarea.overview|safe }}
 		  			
+{% endblock %}
+
+{% block graphs %}
+				
+	{% for graph in active_topicarea.graph_set.all %}
+		
+		<a href="{{ graph.photo.url }}" title="{{ graph.title }}"><img src="{{ graph.photo.url_125x125 }}" alt="{{ graph.title }}"></a>
+		{{ graph.caption }}
+	
+	{% endfor %}
+					
+				
 {% endblock %}

@@ -3,31 +3,26 @@
 
 {% block indicator_title %}
 
-	<h2 class="general">Welcome</h2>
-
-{% endblock %}
-
-{% block menu %}
-
-{% for topicarea in topicareas %}
-
-<h4 class="{{ topicarea.slug }}"><a href="{{ base_url }}{{ topicarea.slug }}" title="{{ topicarea.title }}">{{ topicarea.title }}</a></h4>
-<ul class="{{ topicarea.slug }}">
-	
-{% for indicator in topicarea.indicator_set.all %}
-	
-<li><a href="{{ base_url }}{{ topicarea.slug }}/{{ indicator.slug }}" title="{{ indicator.title }}">{{ indicator.title }}</a></li>
-
-{% endfor %}
-
-</ul>
-
-{% endfor %}
+	<h2 class="{{ active_topicarea.slug }}">{{ active_topicarea.title }}: {{ active_indicator }}</h2>
 
 {% endblock %}
 
 {% block content %}
+	
+	{% if active_indicator.findings %}
 									
-	<p>...to the State Of Equity report.</p>
+	<h3>Findings</h3>
+	
+	{{ active_indicator.findings|safe }}
+	
+	{% endif %}
+	
+	{% if active_indicator.impoimpl %}
+	
+	<h3>Importance and Implications</h3>
+	
+	{{ active_indicator.impoimpl|safe }}
+	
+	{% endif %}
 		  			
 {% endblock %}
