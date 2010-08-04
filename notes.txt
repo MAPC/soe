@@ -1,13 +1,15 @@
 todo
 ---
-+ add references page
-+ add caption to lightbox zoom-in
 + add graphs to indicator and topicarea in admin interface
 
 classes
 ---
 learnmoretxt
 notice
+
+references
+---
+/references/1
 
 requirements
 ---
@@ -18,3 +20,5 @@ pip install django-tinymce
 done
 ---
 add slug field
+add references page
+add caption to lightbox zoom-in

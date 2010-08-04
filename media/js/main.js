@@ -34,5 +34,16 @@ $(document).ready(function() {
 	}, function() {
 		$(this).html("Learn more...");
 	});
+	
+	// find and correct reference links	
+	$("a[href*='/reference/']").attr("href", function() {
 		
+		// FIXME: use something like this.href.replace("reference", "references");
+		url = this.href.split("/");
+		reference = url.pop();
+		
+		this.href = SOE.base_url + "references/" + reference;
+		
+	});
+	
 });

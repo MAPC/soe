@@ -60,7 +60,7 @@ def references(request):
     
     topicareas = TopicArea.objects.filter(pub=True).order_by('order')
     
-    references = Reference.objects.all()
+    references = Reference.objects.all().order_by('number')
     
     return render_to_response('indicators/references.html', {
                                                         'references': references,

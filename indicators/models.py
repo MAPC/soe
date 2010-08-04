@@ -68,13 +68,9 @@ class Graph(models.Model):
         return self.title
     
 class Reference(models.Model):
-    number = models.CharField('Reference Number', max_length=20, primary_key=True)
+    number = models.IntegerField('Reference Number', unique=True)
     content = tinymce_models.HTMLField(null=True, blank=True)
     
     # So the model is pluralized correctly in the admin.
     class Meta:
         verbose_name_plural = 'References'
-
-    # Returns the string representation of the model.
-    def __unicode__(self):
-        return self.number

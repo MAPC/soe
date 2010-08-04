@@ -20,8 +20,11 @@ class GraphAdmin(admin.ModelAdmin):
     # list_filter = ['topicarea', 'inidcator']
     date_hierarchy = 'last_modified'
     search_fields = ['title']
+    
+class ReferenceAdmin(admin.ModelAdmin):
+    list_display = ('number',)
 
 admin.site.register(Indicator, IndicatorAdmin)
 admin.site.register(TopicArea, TopicAreaAdmin)
 admin.site.register(Graph, GraphAdmin)
-admin.site.register(Reference)
+admin.site.register(Reference, ReferenceAdmin)
