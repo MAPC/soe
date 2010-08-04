@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 {% load i18n %}
 
+{% block title %}
+
+{{ active_indicator }} | {{ active_topicarea.title }} | 
+
+{% endblock %}
+
 {% block indicator_title %}
 
 	<h2 class="{{ active_topicarea.slug }}">{{ active_topicarea.title }}: {{ active_indicator }}</h2>
@@ -31,10 +37,8 @@
 				
 	{% for graph in active_indicator.graph_set.all %}
 		
-		<a href="{{ graph.img.url }}" title="{{ graph.title }}"><img src="{{ graph.img.url_220x440 }}" alt="{{ graph.title }}"></a>
-		<p class="small">
-			{{ graph.title }}: <span class="caption">{{ graph.caption }}</span>
-		</p>
+		<a href="{{ graph.img.url }}" title="{{ graph.caption }}"><img src="{{ graph.img.url_220x440 }}" alt="{{ graph.title }}"></a>
+		<p class="small caption">{{ graph.caption }}</p>
 	
 	{% endfor %}
 					

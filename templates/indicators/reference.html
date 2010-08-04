@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}
+
+Reference {{ reference.number }} | 
+
+{% endblock %}
+
+{% block indicator_title %}
+
+	<h2>Reference {{ reference.number }}</h2>
+
+{% endblock %}
+
+{% block content %}
+	
+	{{ reference.content|safe }}
+		  			
+{% endblock %}

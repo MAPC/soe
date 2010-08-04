@@ -189,3 +189,7 @@ div.footnotes p {
 div.footnotes p a.footnote {
 	text-decoration: none;
 }
+
+.reference-nr {
+	font-weight: bold;
+}

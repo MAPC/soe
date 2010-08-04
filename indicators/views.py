@@ -3,7 +3,7 @@ from django.template import RequestContext
 from django.http import HttpResponse
 
 from django.conf import settings
-from indicators.models import TopicArea, Indicator, Graph
+from soe.indicators.models import TopicArea, Indicator, Graph, Reference
 
 def index(request):
     
@@ -42,4 +42,28 @@ def indicator(request, topicarea_slug, indicator_slug):
                                                         'active_topicarea': active_topicarea,
                                                         'active_indicator': active_indicator,
                                                         'base_url': settings.BASE_URL, }, 
+                                                        context_instance=RequestContext(request))
+
+def reference(request, ref_id):
+    
+    topicareas = TopicArea.objects.filter(pub=True).order_by('order')
+    
+    reference = Reference.objects.get(number__iexact=ref_id)
+    
+    return render_to_response('indicators/reference.html', {
+                                                        'reference': reference,
+                                                        'topicareas': topicareas,
+                                                        'base_url': settings.BASE_URL,}, 
+                                                        context_instance=RequestContext(request))
+    
+def references(request):
+    
+    topicareas = TopicArea.objects.filter(pub=True).order_by('order')
+    
+    references = Reference.objects.all()
+    
+    return render_to_response('indicators/references.html', {
+                                                        'references': references,
+                                                        'topicareas': topicareas,
+                                                        'base_url': settings.BASE_URL,}, 
                                                         context_instance=RequestContext(request))

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}
+
+References | 
+
+{% endblock %}
+
+{% block indicator_title %}
+
+	<h2>References</h2>
+
+{% endblock %}
+
+{% block content %}
+
+	{% for reference in references %}
+	
+	<a href="{{ base_url }}references/{{ reference.number }}/" class="reference-nr">{{ reference.number }}</a>{{ reference.content|safe }}
+	
+	{% endfor %}
+		  			
+{% endblock %}

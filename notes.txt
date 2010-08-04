@@ -1,6 +1,8 @@
 todo
 ---
-+ add slug field
++ add references page
++ add caption to lightbox zoom-in
++ add graphs to indicator and topicarea in admin interface
 
 classes
 ---
@@ -12,3 +14,7 @@ requirements
 image upload requires PIL (http://www.pythonware.com/products/pil/)
 thumbnails from http://djangothumbnails.com/
 pip install django-tinymce
+
+done
+---
+add slug field
