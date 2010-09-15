@@ -35,12 +35,15 @@
 
 {% block graphs %}
 				
-	{% for graph in active_indicator.graph_set.all %}
+	{% for graph in active_indicator.graph_set.all|dictsort:"order" %}
+	
+		{% if graph.pub %}
 		
-		<a href="{{ graph.img.url }}" title="{{ graph.caption }}"><img src="{{ graph.img.url_220x440 }}" alt="{{ graph.title }}"></a>
-		<p class="small caption">{{ graph.caption }}</p>
+			<a href="{{ graph.img.url }}" title="{{ graph.caption }}"><img src="{{ graph.img.url_220x440 }}" alt="{{ graph.title }}"></a>
+			<p class="small caption">{{ graph.title }}</p>
+
+		{% endif %}
 	
 	{% endfor %}
-					
-				
+						
 {% endblock %}

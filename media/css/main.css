@@ -26,7 +26,7 @@ body {
 }
 
 a[target="_blank"] { 
-	background: url("/stateofequity/images/external.png") center right no-repeat;
+	background: url("/soe/img/external.png") center right no-repeat;
 	padding-right: 13px;
 }
 
@@ -192,4 +192,12 @@ div.footnotes p a.footnote {
 
 .reference-nr {
 	font-weight: bold;
+}
+
+/* override jquery lightbox */
+
+#lightbox-image-details-caption {
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 18px;
 }
