@@ -1,22 +1,25 @@
 from django.db import models
-from soe.indicators.thumbs import ImageWithThumbsField
+from thumbs import ImageWithThumbsField
 from tinymce import models as tinymce_models
-from django.template.defaultfilters import slugify
+from taggit.managers import TaggableManager
 
 # Create your models here.
 
+# workaround for South custom fields issues 
+try:
+    from south.modelsinspector import add_introspection_rules
+    add_introspection_rules([], ['^tinymce\.models\.HTMLField'])
+    add_introspection_rules([], ['^indicators\.thumbs\.ImageWithThumbsField'])
+except ImportError:
+    pass
+
 class TopicArea(models.Model):
     title = models.CharField(max_length=50)
-    slug = models.SlugField('URL slug',max_length=50)
+    slug = models.SlugField('URL slug')
     overview = tinymce_models.HTMLField(null=True, blank=True)
     order = models.IntegerField(null=True, blank=True)
     pub = models.BooleanField('Published')
     last_modified = models.DateTimeField(editable=False, auto_now=True)
-    
-    # slugify
-#    def save(self, *args, **kwargs):
-#        self.slug = slugify(self.title)
-#        super(Indicator, self).save(*args, **kwargs)
     
     # So the model is pluralized correctly in the admin.
     class Meta:
@@ -35,11 +38,7 @@ class Indicator(models.Model):
     order = models.IntegerField(null=True, blank=True)
     pub = models.BooleanField('Published')
     last_modified = models.DateTimeField(editable=False, auto_now=True)
-    
-    # slugify
-#    def save(self, *args, **kwargs):
-#        self.slug = slugify(self.title)
-#        super(Indicator, self).save(*args, **kwargs)
+    tags = TaggableManager()
     
     # So the model is pluralized correctly in the admin.
     class Meta:
