@@ -3,7 +3,7 @@ from django.template import RequestContext
 from django.http import HttpResponse
 
 from django.conf import settings
-from soe.indicators.models import TopicArea, Indicator, Graph, Reference
+from models import TopicArea, Indicator, Graph, Reference
 
 def index(request):
     

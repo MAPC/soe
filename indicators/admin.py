@@ -1,4 +1,4 @@
-from soe.indicators.models import TopicArea, Indicator, Graph, Reference
+from models import TopicArea, Indicator, Graph, Reference
 from django.contrib import admin
 
 class TopicAreaAdmin(admin.ModelAdmin):

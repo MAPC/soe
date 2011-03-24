@@ -7,7 +7,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Example:
     # (r'^soe/', include('soe.foo.urls')),
-    (r'^$', 'soe.indicators.views.index'),
+    (r'^$', 'indicators.views.index'),
     
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs' 
     # to INSTALLED_APPS to enable admin documentation:
@@ -18,10 +18,10 @@ urlpatterns = patterns('',
     
     (r'^tinymce/', include('tinymce.urls')),
     
-    (r'^references/$', 'soe.indicators.views.references'),
-    (r'^references/(?P<ref_id>[-\w]+)/$', 'soe.indicators.views.reference'),
+    (r'^references/$', 'indicators.views.references'),
+    (r'^references/(?P<ref_id>[-\w]+)/$', 'indicators.views.reference'),
     
-    (r'^(?P<topicarea_slug>[-\w]+)/$', 'soe.indicators.views.topicarea'),
-    (r'^(?P<topicarea_slug>[-\w]+)/(?P<indicator_slug>[-\w]+)/$', 'soe.indicators.views.indicator'),
+    (r'^(?P<topicarea_slug>[-\w]+)/$', 'indicators.views.topicarea'),
+    (r'^(?P<topicarea_slug>[-\w]+)/(?P<indicator_slug>[-\w]+)/$', 'indicators.views.indicator'),
     
 )
