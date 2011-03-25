@@ -97,7 +97,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'soe.indicators',
     'tinymce',
-	'south',
+ 	'south',
     'taggit',
 )
 
