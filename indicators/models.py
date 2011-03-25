@@ -9,7 +9,7 @@ from taggit.managers import TaggableManager
 try:
     from south.modelsinspector import add_introspection_rules
     add_introspection_rules([], ['^tinymce\.models\.HTMLField'])
-    add_introspection_rules([], ['^indicators\.thumbs\.ImageWithThumbsField'])
+    add_introspection_rules([], ['^soe.indicators\.thumbs\.ImageWithThumbsField'])
 except ImportError:
     pass
 
