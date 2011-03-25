@@ -20,6 +20,7 @@ class TopicArea(models.Model):
     order = models.IntegerField(null=True, blank=True)
     pub = models.BooleanField('Published')
     last_modified = models.DateTimeField(editable=False, auto_now=True)
+    tags = TaggableManager()
     
     # So the model is pluralized correctly in the admin.
     class Meta:
@@ -57,7 +58,8 @@ class Graph(models.Model):
     order = models.IntegerField(null=True, blank=True)
     pub = models.BooleanField('Published')
     last_modified = models.DateTimeField(editable=False, auto_now=True)
-
+    tags = TaggableManager()
+    
     # So the model is pluralized correctly in the admin.
     class Meta:
         verbose_name_plural = 'Graphs'
@@ -69,6 +71,7 @@ class Graph(models.Model):
 class Reference(models.Model):
     number = models.IntegerField('Reference Number', unique=True)
     content = tinymce_models.HTMLField(null=True, blank=True)
+    tags = TaggableManager()
     
     # So the model is pluralized correctly in the admin.
     class Meta:
