@@ -20,10 +20,10 @@
 		<link rel="stylesheet" href="{{ MEDIA_URL }}css/blueprint-css/blueprint/print.css" type="text/css" media="print">
 		<!--[if lt IE 8]>
 		<link rel="stylesheet" href="{{ MEDIA_URL }}css/blueprint-css/blueprint/ie.css" type="text/css" media="screen, projection">
-		<![endif]-->
+		<![endif]-->	
 		
-		<!-- Stickyfooter http://www.cssstickyfooter.com -->
-		<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/sticky-footer.css" media="screen">	
+		<!-- font-faces -->
+		<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/font-faces.css" media="screen">
 		
 		<!-- jQuery lightbox plugin styles -->
 		<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/jquery.lightbox-0.5.css" media="screen">
@@ -49,13 +49,10 @@
     <body>
 	<div id="wrap">
 		<div id="main" class="container">
-			<div class="span-24 last" id="head">
-				
-				<a href="http://www.mapc.org" title="Metropolitan Area Planning Council"><img src="{{ MEDIA_URL }}img/mapc-logo.png" width="160" height="80" alt="MAPC logo"></a><h1><a href="/">The State of Equity in Metro Boston</a> <span class="draft">draft</span></h1>	
-				
-  			</div>
 			
-			<div class="span-5" id="menu">
+			<div class="span-6" id="menu">
+				
+				<a href="http://www.mapc.org" title="Metropolitan Area Planning Council"><img id="logo" src="{{ MEDIA_URL }}img/mapc-logo.png" width="160" height="80" alt="MAPC logo"></a>
 				
 				{% block menu %}
 				
@@ -90,36 +87,40 @@
 				
 				{% endblock %}
 				
-				<h4 class="general"><a href="{{ base_url }}references/" title="References">References</a></h4>
+				<h4 class="references"><a href="{{ base_url }}references/" title="References">References</a></h4>
 				
 			</div>
 			
-			<div id="content" class="span-19 last">
+			<div id="content" class="span-18 last">
+				
+				<div id="masthead" class="span-18 last">
+					
+					<a href="/"><h1>The State of Equity in Metro Boston</h1></a>
+					
+				</div>
+				
+				<div id="title" class="span-18 last">
 				
 				{% block indicator_title %}{% endblock %}
+				
+				</div>
 			
-				<div class="span-13">
+				<div class="span-9" id="textcol">
 		    	
 				{% block content %}{% endblock %}	
 				
 				</div>
 				
-				<div class="span-6 last" id="imagecol">
+				<div class="span-9 last" id="imagecol">
 						
 				{% block graphs %}{% endblock %}
 						
 				</div>
-			
+				
 			</div>
 			
 		</div>
 	
-	</div>
-	
-	<div id="footer" class="container small">
-		
-		Questions? Ask <a href="http://www.mapc.org/about-mapc/staff/mariana-arcaya" title="Mariana Arcaya">Mariana</a> for support.
-		
 	</div>
 	
 	<!-- Add jQuery From the Google AJAX Libraries and local plugins --> 

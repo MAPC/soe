@@ -1,93 +1,116 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
 html {
-	overflow-y: scroll; 
+	overflow-y: scroll;
 } 
+
+body {
+	background: url("/soe/media/img/bg-body.png");
+	color: #222;
+	font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+h2 {
+	font-size: 14px;
+	color: #666;	
+	margin-right: 72px;
+	padding-top: 6px;
+	height: 28px;
+}
+
+#title h2 span {
+	padding-left: 45px;
+}
+
+h2.demographics {
+	background: #f4f4f5 url("/soe/media/img/nav-demographics.png") no-repeat;
+}
+h2.economy {
+	background: #f4f4f5 url("/soe/media/img/nav-economy.png") no-repeat;
+}
+h2.education {
+	background: #f4f4f5 url("/soe/media/img/nav-education.png") no-repeat;
+}
+h2.environment-and-recreation {
+	background: #f4f4f5 url("/soe/media/img/nav-environment.png") no-repeat;
+}
+h2.housing {
+	background: #f4f4f5 url("/soe/media/img/nav-housing.png") no-repeat;
+}
+h2.public-health {
+	background: #f4f4f5 url("/soe/media/img/nav-public-health.png") no-repeat;
+}
+h2.public-safety {
+	background: #f4f4f5 url("/soe/media/img/nav-public-safety.png") no-repeat;
+}
+h2.transportation {
+	background: #f4f4f5 url("/soe/media/img/nav-transportation.png") no-repeat;
+}
+h2.civic-vitality {
+	background: #f4f4f5 url("/soe/media/img/nav-civic-vitality.png") no-repeat;
+}
+h2.references {
+	background: #f4f4f5 url("/soe/media/img/nav-references.png") no-repeat;
+}
+
+h3, h4 {
+	font-family: AktivGrotesk_Regular, Verdana, sans-serif;
+	color: #222;
+}
+
+h3 {
+	font-size: 22px;
+	margin-top: 10px;
+}
+
+a, a:active, a:visited {
+	color: #004990;
+}
+
+a[target="_blank"] { 
+	background: url("/soe/media/img/external.png") center right no-repeat;
+	padding-right: 13px;
+}
+
+#wrap, #main, #menu, #content {
+	height: 100%;
+	min-height: 100%;
+}
 
 .loginfo {
 	float: right;
 }
 
-#footer	{
-    background: #ffffff;
-
-    /* over-ride sticky-footer.css - http://cfc.kizzx2.com/index.php/blueprint-css-with-sticky-footer-revisited/ */
-    padding-top: 20px;
-    height: 60px;
-    margin-top: -80px;
-	text-align: right;
+#content {
+	background: url("/soe/media/img/bg-content.png") repeat-y;
+	padding-left: 10px;
 }
 
-/* vertical scrollbar always on, no jumps */
-html {
-	overflow-y: scroll; 
-}  
-
-body {
-	padding-top: 10px;
+#content, #menu {
+	margin-right: 0px;
 }
 
-a[target="_blank"] { 
-	background: url("/soe/img/external.png") center right no-repeat;
-	padding-right: 13px;
+#masthead, #title, #textcol {
+	margin-left: -10px;
 }
 
-#head {
-	margin-bottom: 18px;
+#masthead {
+	height: 147px;
+	background: url("/soe/media/img/masthead.png") no-repeat;
+	margin-bottom: 17px;
 }
 
-#head img {
-	float: left;
-	margin-right: 40px;
-}
-
-#head h1 {
-	margin-top: 22px;
-	color: rgb(15,64,132);
-}
-
-#head h1 a {
-	text-decoration: none;
-	color: rgb(15,64,132);
-}
-
-.draft {
-	color: silver;
-	font-variant: small-caps;
-}
-
-h2 {
-	background-color: silver;
-}
-
-h2.demographics {
-	background-color: rgb(102,45,145);
-}
-h2.economy {
-	background-color: rgb(0,104,55);
-}
-h2.education {
-	background-color: rgb(237,28,36);
-}
-h2.environment-and-recreation {
-	background-color: rgb(140,198,63);
-}
-h2.housing {
-	background-color: rgb(117,76,36);
-}
-h2.public-health {
-	background-color: rgb(0,78,156);
-}
-h2.public-safety {
-	background-color: rgb(247,147,30);
-}
-h2.civic-vitality {
-	background-color: rgb(0,0,0);
-}
-h2.transportation {
-	background-color: rgb(254,254,34);
-}
-
-h2 {
-	padding: 0 5px;
+#masthead a h1 {
+	margin: 116px 0 0 35px;
+	font-size: 26px;
+	letter-spacing: 3px;
+	width: 525px;
+	height: 30px;
+	text-indent: -9999px;
 }
 
 #content td {
@@ -98,66 +121,129 @@ div.notice p {
 	margin-bottom: 0px;
 }
 
+#logo {
+	margin: 48px 0 36px 36px;
+}
+
+#menu {
+	background: url("/soe/media/img/bg-menu.png") repeat-y;
+}
+
 #menu h4 {
-	font-size: 1em;
-	margin-bottom: 1px;
-	margin-left: 5px;
-	padding: 4px 0 4px 5px;
+	font-size: 11px;
+	line-height: 11px;
+	height: 24px;
+	margin: 0 0 1px 36px;
+	padding-left: 45px;
+	padding-top: 10px;
 }
 
-#menu a {
-	text-decoration: none;
+#menu h4.demographics {
+	background: #fff url("/soe/media/img/nav-demographics.png") no-repeat;
+}
+#menu h4.demographics:hover, #menu h4.demographics.active {
+	background: #9358e1 url("/soe/media/img/nav-demographics.png") no-repeat;
+}
+
+#menu h4.economy {
+	background: #fff url("/soe/media/img/nav-economy.png") no-repeat;
+}
+#menu h4.economy:hover, #menu h4.economy.active {
+	background: #ebc900 url("/soe/media/img/nav-economy.png") no-repeat;
+}
+
+#menu h4.education {
+	background: #fff url("/soe/media/img/nav-education.png") no-repeat;
+}
+#menu h4.education:hover, #menu h4.education.active {
+	background: #1186b1 url("/soe/media/img/nav-education.png") no-repeat;
+}
+
+#menu h4.environment-and-recreation {
+	background: #fff url("/soe/media/img/nav-environment.png") no-repeat;
+	height: 28px;
+	padding-top: 6px;
+}
+#menu h4.environment-and-recreation:hover, #menu h4.environment-and-recreation.active {
+	background: #98b901 url("/soe/media/img/nav-environment.png") no-repeat;
+}
+
+#menu h4.housing {
+	background: #fff url("/soe/media/img/nav-housing.png") no-repeat;
+}
+#menu h4.housing:hover, #menu h4.housing.active {
+	background: #b07123 url("/soe/media/img/nav-housing.png") no-repeat;
+}
+
+#menu h4.public-health {
+	background: #fff url("/soe/media/img/nav-public-health.png") no-repeat;
+}
+#menu h4.public-health:hover, #menu h4.public-health.active {
+	background: #df3c1f url("/soe/media/img/nav-public-health.png") no-repeat;
+}
+
+#menu h4.public-safety {
+	background: #fff url("/soe/media/img/nav-public-safety.png") no-repeat;
+}
+#menu h4.public-safety:hover, #menu h4.public-safety.active {
+	background: #4e6cee url("/soe/media/img/nav-public-safety.png") no-repeat;
+}
+
+#menu h4.transportation {
+	background: #fff url("/soe/media/img/nav-transportation.png") no-repeat;
+}
+#menu h4.transportation:hover, #menu h4.transportation.active {
+	background: #469a93 url("/soe/media/img/nav-transportation.png") no-repeat;
+}
+
+#menu h4.civic-vitality {
+	background: #fff url("/soe/media/img/nav-civic-vitality.png") no-repeat;
+}
+#menu h4.civic-vitality:hover, #menu h4.civic-vitality.active {
+	background: #dda400 url("/soe/media/img/nav-civic-vitality.png") no-repeat;
+}
+
+#menu h4.references {
+	background: #fff url("/soe/media/img/nav-references.png") no-repeat;
+}
+#menu h4.references:hover, #menu h4.references.active {
+	background: #aab2b4 url("/soe/media/img/nav-references.png") no-repeat;
+}
+
+#menu h4 a, #menu ul li a {
 	color: #222;
+	text-decoration: none;
 }
 
-#menu a:hover {
+#menu ul li a:hover {
+	color: #222;
 	text-decoration: underline;
-	color: #009;
 }
 
 #menu ul {
 	list-style-type: none;
-	padding-left: 0;
-	margin-bottom: 8px;
+	margin-top: 10px;
+	margin-left: 65px;
 }
 
 #menu ul li {
-	margin-left: 15px;
+	font-size: 11px;
+	line-height: 11px;
+	margin-bottom: 4px;
 }
 
-h4 {
-	border-left: solid 5px silver;
-}
-h4.demographics {
-	border-left: solid 5px rgb(102,45,145);
-}
-h4.economy {
-	border-left: solid 5px rgb(0,104,55);
-}
-h4.education {
-	border-left: solid 5px rgb(237,28,36);
-}
-h4.environment-and-recreation {
-	border-left: solid 5px rgb(140,198,63);
-}
-h4.housing {
-	border-left: solid 5px rgb(117,76,36);
-}
-h4.public-health {
-	border-left: solid 5px rgb(0,78,156);
-}
-h4.public-safety {
-	border-left: solid 5px rgb(247,147,30);
-}
-h4.civic-vitality {
-	border-left: solid 5px rgb(0,0,0);
-}
-h4.transportation {
-	border-left: solid 5px rgb(254,254,34);
+#title, #textcol {
+	padding-left: 36px;
+
 }
 
-h4.active {
-	font-weight: bold;
+#imagecol {
+	margin-left: -36px;
+	padding-top: 46px;
+}
+
+#imagecol a, #imagecol p {
+	margin-left: 46px;
 }
 
 #imagecol img {
@@ -192,6 +278,11 @@ div.footnotes p a.footnote {
 
 .reference-nr {
 	font-weight: bold;
+}
+
+.notice {
+	background:#fff83d;
+	border: none;
 }
 
 /* override jquery lightbox */
