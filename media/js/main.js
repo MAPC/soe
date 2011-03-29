@@ -20,7 +20,7 @@ $(document).ready(function() {
 	}); 
 	*/
 	// lightbox effect: 
-	$("#imagecol a").lightBox();
+	$("a.graph").lightBox();
 	
 	// learn more
 	$(".learnmoretxt").hide();
