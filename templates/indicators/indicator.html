@@ -13,7 +13,7 @@
 	
 	{% if user.is_staff %}
 	
-	<a class="small" href="{{ base_url|slice:'1:' }}{% url admin:indicators_indicator_change active_indicator.id %}">edit</a>
+	<a class="small" href="{% url admin:indicators_indicator_change active_indicator.id %}">edit</a>
 	
 	{% endif %}
 
