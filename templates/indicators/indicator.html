@@ -57,9 +57,15 @@
 	<h4>Related</h4>
 	<ul>
 	{% for related_object in related_objects %}
-	
-		<li><a href="{% if related_object.img %}{{ related_object.img.url }}{% else %}{{ base_url }}{{ related_object.topicarea.slug }}/{{ related_object.slug }}{% endif %}" title="{{ related_object.title }}">{{ related_object.title }}</li>
-
+	{% if related_object.pub %}
+		<li>{% if related_object.img %}
+			<a href="{{ related_object.img.url }}" class="graph" title="{{ related_object.caption }}" 
+			{% else %}{% if related_object.topicarea %} 
+			<a href="{{ base_url }}{{ related_object.topicarea.slug }}/{{ related_object.slug }}"
+			{% else %}
+			<a href="{{ base_url }}{{ related_object.slug }}"
+			{% endif %}{% endif %} title="{{ related_object.title }}">{{ related_object.title }}</a></li>
+	{% endif %}
 	{% endfor %}
 	</ul>
 	</div>	
