@@ -1,9 +1,8 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from django.http import HttpResponse
 
 from django.conf import settings
-from models import TopicArea, Indicator, Graph, Reference
+from models import TopicArea, Indicator, Reference
 
 def index(request):
     
@@ -35,12 +34,15 @@ def indicator(request, topicarea_slug, indicator_slug):
     active_topicarea = TopicArea.objects.get(slug=topicarea_slug)
     active_indicator = Indicator.objects.get(slug=indicator_slug)
     
+    related_objects = active_indicator.tags.similar_objects()
+    
     # return HttpResponse('OK')
 
     return render_to_response('indicators/indicator.html', {
                                                         'topicareas': topicareas,
                                                         'active_topicarea': active_topicarea,
                                                         'active_indicator': active_indicator,
+                                                        'related_objects': related_objects,
                                                         'base_url': settings.BASE_URL, }, 
                                                         context_instance=RequestContext(request))
 

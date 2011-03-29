@@ -11,6 +11,12 @@
 
 	<h2 class="{{ active_topicarea.slug }}"><span>{{ active_topicarea.title }}</span></h2>
 
+	{% if user.is_staff %}
+	
+	<a class="small" href="{{ base_url|slice:'1:' }}{% url admin:indicators_topicarea_change active_topicarea.id %}">edit</a>
+	
+	{% endif %}
+
 {% endblock %}
 
 {% block content %}
@@ -20,12 +26,12 @@
 {% endblock %}
 
 {% block graphs %}
-				
+		
 	{% for graph in active_topicarea.graph_set.all|dictsort:"order" %}
 	
 		{% if graph.pub %}
 		
-			<a href="{{ graph.img.url }}" title="{{ graph.caption }}"><img src="{{ graph.img.url_220x440 }}" alt="{{ graph.title }}"></a>
+			<a href="{{ graph.img.url }}" title="{{ graph.caption }}" class="graph"><img src="{{ graph.img.url_220x440 }}" alt="{{ graph.title }}"></a>
 			<p class="small caption">{{ graph.title }}</p>
 
 		{% endif %}

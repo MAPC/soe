@@ -67,6 +67,10 @@ h3 {
 	margin-top: 10px;
 }
 
+h4 {
+	font-size: 16px;
+}
+
 a, a:active, a:visited {
 	color: #004990;
 }
@@ -234,7 +238,6 @@ div.notice p {
 
 #title, #textcol {
 	padding-left: 36px;
-
 }
 
 #imagecol {
@@ -242,7 +245,7 @@ div.notice p {
 	padding-top: 46px;
 }
 
-#imagecol a, #imagecol p {
+#imagecol a, #imagecol p, #related {
 	margin-left: 46px;
 }
 
@@ -252,6 +255,15 @@ div.notice p {
 
 #imagecol .small .caption {
 	font-style: italic;
+}
+
+#related h4 {
+	margin-bottom: 6px;
+}
+
+#related li, #related li a {
+	margin-left: 0;
+	padding-left: 0;
 }
 
 li.active {
@@ -281,7 +293,7 @@ div.footnotes p a.footnote {
 }
 
 .notice {
-	background:#fff83d;
+	background:#ddd;
 	border: none;
 }
 
