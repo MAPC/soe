@@ -10,6 +10,12 @@
 {% block indicator_title %}
 
 	<h2 class="{{ active_topicarea.slug }}"><span>{{ active_topicarea.title }}: {{ active_indicator }}</span></h2>
+	
+	{% if user.is_staff %}
+	
+	<a class="small" href="{{ base_url|slice:'1:' }}{% url admin:indicators_indicator_change active_indicator.id %}">edit</a>
+	
+	{% endif %}
 
 {% endblock %}
 

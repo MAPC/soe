@@ -11,6 +11,12 @@
 
 	<h2 class="{{ active_topicarea.slug }}"><span>{{ active_topicarea.title }}</span></h2>
 
+	{% if user.is_staff %}
+	
+	<a class="small" href="{{ base_url|slice:'1:' }}{% url admin:indicators_topicarea_change active_topicarea.id %}">edit</a>
+	
+	{% endif %}
+
 {% endblock %}
 
 {% block content %}
