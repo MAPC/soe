@@ -19,6 +19,12 @@ $(document).ready(function() {
 		$(this).next().toggle(500);
 	}); 
 	*/
+	
+	// fix height
+	if ($("#content").height() < $(window).height()) { 
+		$("#content").height($(window).height()); 
+	}
+	
 	// lightbox effect: 
 	$("a.graph").lightBox();
 	

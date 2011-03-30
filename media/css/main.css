@@ -1,7 +1,6 @@
 html, body {
 	margin: 0;
 	padding: 0;
-	height: 100%;
 }
 
 html {
@@ -12,6 +11,10 @@ body {
 	background: url("/soe/media/img/bg-body.png");
 	color: #222;
 	font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+#main {
+	background: url("/soe/media/img/bg-main.png") repeat-y;
 }
 
 h2 {
@@ -95,17 +98,11 @@ a[href$='.doc'] {
 	background: transparent url("/soe/media/img/icon_doc.png") no-repeat center right;
 }
 
-#wrap, #main, #menu, #content {
-	height: 100%;
-	min-height: 100%;
-}
-
 .loginfo {
 	float: right;
 }
 
 #content {
-	background: url("/soe/media/img/bg-content.png") repeat-y;
 	padding-left: 10px;
 }
 
@@ -142,10 +139,6 @@ div.notice p {
 
 #logo {
 	margin: 48px 0 36px 36px;
-}
-
-#menu {
-	background: url("/soe/media/img/bg-menu.png") repeat-y;
 }
 
 #menu h4 {
