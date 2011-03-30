@@ -1,8 +1,8 @@
 $(document).ready(function() {	
 	
 	// fix height
-	if ($("#content").height() < $(window).height()) { 
-		$("#content").height($(window).height()); 
+	if ($("#main").height() < $(window).height()) { 
+		$("#main").height($(window).height()); 
 	}
 	
 	// lightbox on graphs 
