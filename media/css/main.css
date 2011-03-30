@@ -23,6 +23,7 @@ h2 {
 	margin-right: 72px;
 	padding-top: 6px;
 	height: 28px;
+	background-color: #f4f4f5;
 }
 
 #title h2 span {
@@ -217,6 +218,8 @@ div.notice p {
 
 #menu h4.references {
 	background: #fff url("/soe/media/img/nav-references.png") no-repeat;
+	height: 28px;
+	padding-top: 6px;
 }
 #menu h4.references:hover, #menu h4.references.active {
 	background: #aab2b4 url("/soe/media/img/nav-references.png") no-repeat;
@@ -258,7 +261,7 @@ div.notice p {
 }
 
 #imagecol img {
-	max-width: 220px;
+	width: 268px;
 }
 
 #imagecol .small .caption {

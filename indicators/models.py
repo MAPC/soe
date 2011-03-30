@@ -53,7 +53,7 @@ class Graph(models.Model):
     topicarea = models.ForeignKey('indicators.TopicArea', null=True, blank=True)
     indicator = models.ForeignKey('indicators.Indicator', null=True, blank=True)
     title = models.CharField(max_length=100)
-    img = ImageWithThumbsField(upload_to='graphs', sizes=((125,125),(220,440)))
+    img = ImageWithThumbsField(upload_to='graphs', sizes=((125,125),(220,440),(268,536)))
     caption = models.TextField(null=True, blank=True)
     order = models.IntegerField(null=True, blank=True)
     pub = models.BooleanField('Published')
