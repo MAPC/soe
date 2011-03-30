@@ -18,10 +18,15 @@ urlpatterns = patterns('',
     
     (r'^tinymce/', include('tinymce.urls')),
     
+    # references
     (r'^references/$', 'soe.indicators.views.references'),
-    (r'^references/(?P<ref_id>[-\w]+)/$', 'soe.indicators.views.reference'),
+    (r'^references/(?P<ref_id>[-\d]+)/$', 'soe.indicators.views.reference'),
+    (r'^references/(?P<meta_slug>[-\w]+)/$', 'soe.indicators.views.meta'),
     
+    # topicareas and indicators
     (r'^(?P<topicarea_slug>[-\w]+)/$', 'soe.indicators.views.topicarea'),
     (r'^(?P<topicarea_slug>[-\w]+)/(?P<indicator_slug>[-\w]+)/$', 'soe.indicators.views.indicator'),
+    
+    
     
 )

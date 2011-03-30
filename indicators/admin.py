@@ -1,4 +1,4 @@
-from models import TopicArea, Indicator, Graph, Reference
+from models import TopicArea, Indicator, Graph, Reference, Meta
 from django.contrib import admin
 
 class TopicAreaAdmin(admin.ModelAdmin):
@@ -23,8 +23,13 @@ class GraphAdmin(admin.ModelAdmin):
     
 class ReferenceAdmin(admin.ModelAdmin):
     list_display = ('number',)
+    
+class MetaAdmin(admin.ModelAdmin):
+    prepopulated_fields = {'slug': ('title',)}
+    list_display = ('title',)
 
 admin.site.register(Indicator, IndicatorAdmin)
 admin.site.register(TopicArea, TopicAreaAdmin)
 admin.site.register(Graph, GraphAdmin)
 admin.site.register(Reference, ReferenceAdmin)
+admin.site.register(Meta, MetaAdmin)

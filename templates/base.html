@@ -83,11 +83,15 @@
 					
 					{% endif %}
 				
-				{% endfor %}
+					{% endfor %}
 				
 				{% endblock %}
 				
-				<h4 class="references"><a href="{{ base_url }}references/" title="References">References</a></h4>
+				{% block reference %}
+				
+				<h4 class="references"><a href="{{ base_url }}references/" title="References">Reference and<br>Navigation</a></h4>
+				
+				{% endblock %}
 				
 			</div>
 			

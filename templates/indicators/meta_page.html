@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% include "indicators/reference_menu.html" %}
+{% load i18n %}
+
+{% block title %}
+
+{{ meta_page.title }} | 
+
+{% endblock %}
+
+{% block indicator_title %}
+
+	<h2 class="references"><span>{{ meta_page.title }}</span></h2>
+
+{% endblock %}
+
+{% block reference %}
+
+<h4 class="references"><a href="{{ base_url }}references/" title="References">Reference and<br>Navigation</a></h4>
+
+<ul>
+	
+	<li><a href="{{ base_url }}references/" title="References">References</a></li>
+	
+{% for menu_item in meta_items %}
+
+	{% if menu_item.id == meta_page.id %}
+	
+		<li class="active"><a href="{{ base_url }}references/{{ menu_item.slug }}" title="{{ menu_item.title }}">{{ menu_item.title }}</a></li>
+	
+	{% else %}
+	
+		<li><a href="{{ base_url }}references/{{ menu_item.slug }}" title="{{ menu_item.title }}">{{ menu_item.title }}</a></li>
+	
+	{% endif %}
+	
+{% endfor %}
+</ul>
+			
+{% endblock %}
+
+{% block content %}
+	
+	{{ meta_page.content|safe }}
+		  			
+{% endblock %}

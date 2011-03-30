@@ -13,6 +13,23 @@ Reference {{ reference.number }} |
 
 {% endblock %}
 
+{% block reference %}
+
+<h4 class="references"><a href="{{ base_url }}references/" title="References">Reference and<br>Navigation</a></h4>
+
+<ul>
+	
+	<li class="active"><a href="{{ base_url }}references/" title="References">References</a></li>
+	
+{% for menu_item in meta_items %}
+	
+		<li><a href="{{ base_url }}references/{{ menu_item.slug }}" title="{{ menu_item.title }}">{{ menu_item.title }}</a></li>
+	
+{% endfor %}
+</ul>
+			
+{% endblock %}
+
 {% block content %}
 	
 	{{ reference.content|safe }}

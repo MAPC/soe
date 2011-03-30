@@ -76,3 +76,16 @@ class Reference(models.Model):
     # So the model is pluralized correctly in the admin.
     class Meta:
         verbose_name_plural = 'References'
+        
+class Meta(models.Model):
+    title = models.CharField(max_length=50)
+    slug = models.SlugField('URL slug')
+    content = tinymce_models.HTMLField(null=True, blank=True)
+    
+    # So the model is pluralized correctly in the admin.
+    class Meta:
+        verbose_name_plural = 'Meta'
+
+    # Returns the string representation of the model.
+    def __unicode__(self):
+        return self.title

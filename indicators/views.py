@@ -2,7 +2,7 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 
 from django.conf import settings
-from models import TopicArea, Indicator, Reference
+from models import TopicArea, Indicator, Reference, Meta
 
 def index(request):
     
@@ -52,8 +52,11 @@ def reference(request, ref_id):
     
     reference = Reference.objects.get(number__iexact=ref_id)
     
+    meta_pages = Meta.objects.all()
+    
     return render_to_response('indicators/reference.html', {
                                                         'reference': reference,
+                                                        'meta_items': meta_pages,
                                                         'topicareas': topicareas,
                                                         'base_url': settings.BASE_URL,}, 
                                                         context_instance=RequestContext(request))
@@ -64,8 +67,27 @@ def references(request):
     
     references = Reference.objects.all().order_by('number')
     
+    meta_pages = Meta.objects.all()
+    
     return render_to_response('indicators/references.html', {
                                                         'references': references,
+                                                        'meta_items': meta_pages,
                                                         'topicareas': topicareas,
                                                         'base_url': settings.BASE_URL,}, 
                                                         context_instance=RequestContext(request))
+    
+def meta(request, meta_slug):
+    
+    topicareas = TopicArea.objects.filter(pub=True).order_by('order')
+    
+    meta_pages = Meta.objects.all()
+    
+    meta_page = Meta.objects.get(slug=meta_slug)
+    
+    return render_to_response('indicators/meta_page.html', {
+                                                        'meta_page': meta_page,
+                                                        'meta_items': meta_pages,
+                                                        'topicareas': topicareas,
+                                                        'base_url': settings.BASE_URL,}, 
+                                                        context_instance=RequestContext(request))
+    
