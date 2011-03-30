@@ -1,32 +1,42 @@
 $(document).ready(function() {	
 	
-	// hide all the sub-menus
-	// $("h4.toggle").next().hide();
-	
-	// set the cursor of the toggling elements
-	// $("h4.toggle").css("cursor", "pointer");
-	
-	// prepend a plus sign to signify that the sub-menus aren't expanded
-	// $("h4.toggle").prepend("+ ");
-	
-	// the active menu
-	// $("h4.active").next().toggle();
-	
-	// add a click function that toggles the sub-menu when the corresponding
-	// span element is clicked
-	/* 
-	$("h4.toggle").click(function() {
-		$(this).next().toggle(500);
-	}); 
-	*/
-	
 	// fix height
 	if ($("#content").height() < $(window).height()) { 
 		$("#content").height($(window).height()); 
 	}
 	
-	// lightbox effect: 
+	// lightbox on graphs 
 	$("a.graph").lightBox();
+	
+	// mouseover event on all graphs
+	// shows "click to enlarge" hint
+	$("a.graph img").mouseover(function() {
+		
+		var $graphhint = $("<div class='graphhint'>click to enlarge</div>");
+		
+		$("#imagecol").append($graphhint);
+		
+		$graphhint
+		.width($(this).width())
+		.css({
+			"background": "#004990",
+			"color": "#fff",
+			"opacity": "0.8",
+			"font-size": "16px",
+			"text-align": "center"})
+		.position({
+			my: "left top",
+			at: "left top",
+			of: this,
+			collision: "fit"
+		});	
+			
+		$(this).mouseout(function() {
+		
+			$graphhint.remove();
+		
+		});
+	});
 	
 	// learn more
 	$(".learnmoretxt").hide();
