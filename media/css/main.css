@@ -68,16 +68,31 @@ h3 {
 }
 
 h4 {
-	font-size: 16px;
+	font-size: 14px;
 }
 
-a, a:active, a:visited {
+a, a:hover, a:active, a:visited {
 	color: #004990;
 }
 
 a[target="_blank"] { 
-	background: url("/soe/media/img/external.png") center right no-repeat;
-	padding-right: 13px;
+	background: url("/soe/media/img/icon_external.png") center right no-repeat;
+	padding: 5px 20px 5px 0;
+}
+
+a[href$='.xls'] {
+	padding: 5px 20px 5px 0;
+	background: transparent url("/soe/media/img/icon_xls.png") no-repeat center right;
+}
+
+a[href$='.pdf'] { 
+	padding: 5px 20px 5px 0;
+	background: transparent url("/soe/media/img/icon_pdf.png") no-repeat center right;
+}
+
+a[href$='.doc'] { 
+	padding: 5px 20px 5px 0;
+	background: transparent url("/soe/media/img/icon_doc.png") no-repeat center right;
 }
 
 #wrap, #main, #menu, #content {
