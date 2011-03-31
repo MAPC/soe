@@ -19,7 +19,7 @@
 
 {% endblock %}
 
-{% block content %}
+{% block textcol %}
 	
 	{% if active_indicator.findings %}
 									
@@ -39,7 +39,7 @@
 		  			
 {% endblock %}
 
-{% block graphs %}
+{% block imagecol %}
 
 	{% for graph in active_indicator.graph_set.all|dictsort:"order" %}
 	

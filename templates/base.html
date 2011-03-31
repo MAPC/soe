@@ -108,16 +108,22 @@
 				{% block indicator_title %}{% endblock %}
 				
 				</div>
+				
+				<<div class="span-18 last" id="nocol">
+				
+				{% block nocol %}{% endblock %}
+				
+				</div>
 			
 				<div class="span-9" id="textcol">
 		    	
-				{% block content %}{% endblock %}	
+				{% block textcol %}{% endblock %}	
 				
 				</div>
 				
 				<div class="span-9 last" id="imagecol">
 						
-				{% block graphs %}{% endblock %}
+				{% block imagecol %}{% endblock %}
 				
 				</div>
 				
@@ -127,7 +133,7 @@
 	
 	</div>
 	
-	<!-- Add jQuery From the Microsoft AJAX Libraries and local plugins --> 
+	<!-- Add jQuery from the Microsoft AJAX Libraries and local plugins --> 
 	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.5.1.min.js"></script>  
     <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.11/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.lightbox-0.5.min.js"></script>

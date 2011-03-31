@@ -59,6 +59,7 @@ h2.civic-vitality {
 }
 h2.references {
 	background: #f4f4f5 url("/soe/media/img/nav-references.png") no-repeat;
+	margin-bottom: 42px;
 }
 
 h3, h4 {
@@ -111,7 +112,7 @@ a[href$='.doc'] {
 	margin-right: 0px;
 }
 
-#masthead, #title, #textcol {
+#masthead, #title, #textcol, #nocol {
 	margin-left: -10px;
 }
 
@@ -247,8 +248,16 @@ div.notice p {
 	margin-bottom: 4px;
 }
 
-#title, #textcol {
+#title, #textcol, #nocol {
 	padding-left: 36px;
+}
+
+#nocol p, #nocol div {
+	padding-right: 72px;
+}
+
+#nocol {
+
 }
 
 #imagecol {
@@ -306,6 +315,13 @@ div.footnotes p a.footnote {
 .notice {
 	background:#ddd;
 	border: none;
+}
+
+h4.reference {
+	float:left;
+	font-size: 14px;
+	margin-right: 8px;
+	margin-bottom: 0px;
 }
 
 /* override jquery lightbox */

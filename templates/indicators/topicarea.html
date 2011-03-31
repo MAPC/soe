@@ -19,13 +19,19 @@
 
 {% endblock %}
 
-{% block content %}
+{% block textcol %}
+	
+	{% if active_topicarea.overview %}
+	
+	<h3>Overview</h3>
 								
 	{{ active_topicarea.overview|safe }}
+	
+	{% endif %}
 		  			
 {% endblock %}
 
-{% block graphs %}
+{% block imagecol %}
 		
 	{% for graph in active_topicarea.graph_set.all|dictsort:"order" %}
 	

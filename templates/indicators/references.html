@@ -30,11 +30,11 @@ References |
 			
 {% endblock %}
 
-{% block content %}
+{% block nocol %}
 
 	{% for reference in references %}
 	
-	<a href="{{ base_url }}references/{{ reference.number }}/" class="reference-nr">{{ reference.number }}</a>{{ reference.content|safe }}
+	<h4 class="reference"><a href="{{ base_url }}references/{{ reference.number }}/" class="reference-nr">{{ reference.number }}</a>: </h4>{{ reference.content|safe }}
 	
 	{% endfor %}
 		  			
