@@ -248,12 +248,8 @@ div.notice p {
 	margin-bottom: 4px;
 }
 
-#title, #textcol, #nocol {
-	padding-left: 36px;
-}
-
-#nocol p, #nocol div {
-	padding-right: 72px;
+#title, #textcol {
+	padding-left: 40px;
 }
 
 #nocol {
@@ -322,6 +318,12 @@ h4.reference {
 	font-size: 14px;
 	margin-right: 8px;
 	margin-bottom: 0px;
+}
+
+p.index.quote {
+	padding-top: 30px;
+	line-height: 22px;
+	font-size: 14px;
 }
 
 /* override jquery lightbox */

@@ -1,26 +1,86 @@
 {% extends "base.html" %}
 {% load i18n %}
 
-{% block indicator_title %}
-
-	<h2 class="general">Welcome</h2>
-
-{% endblock %}
-
 {% block menu %}
 
 {% for topicarea in topicareas %}
 
 <h4 class="{{ topicarea.slug }}"><a href="{{ base_url }}{{ topicarea.slug }}" title="{{ topicarea.title }}">{{ topicarea.title }}</a></h4>
 
-</ul>
-
 {% endfor %}
 
 {% endblock %}
 
-{% block textcol %}
+{% block nocol %}
 									
-	<p>...to the State Of Equity report.</p>
+	<p class="index quote prepend-1 span-13 last">An equitable region, where <em>"all people have full and equal access to opportunities that enable them to attain their full potential"</em> 
+		is one featuring a diverse labor force prepared for the region’s knowledge economy; healthy residents and low health care costs; 
+		and communities where people of different ages, incomes, races and ethnicities have real options to live, work, learn and play side by side.</p>
+	
+	<h3 class="span-16 last">The MetroFuture equity goals</h3>
+	
+	<p class="span-16 last">
+		MetroFuture, the region's plan for growth through the year 2030, directs us to achieve this vision by eliminating unfair, preventable, and 
+		systematic differences between groups that not only harm individuals and families, but threaten the vibrancy of our region.		
+	</p>
+	
+	<p class="span-16 last">The MetroFuture region is one where:</p>
+	
+	<ul class="prepend-1 span-14 last">
+		<li>A wider diversity of housing types are built in all of the region’s communities (Goal #16), 
+			helping to combat racial/ethnic and income-based segregation (Goal #15),</li>
+		<li>Historically disadvantaged communities are healthier, with increased access to healthy food (Goal #24), 
+			green space (Goal #23), better air quality (Goal #22) and medical care (Goal #26),</li>
+		<li>Healthy and convenient transportation options are available throughout the region, particularly in traditionally 
+			under-served areas (Goal #44),</li>
+		<li>All of the region’s residents are equipped with all of the tools they need to succeed in today’s economy (Goal #29), 
+			and resources for small businesses and first-time homeowners will help many build wealth for future generations (Goal #38).</li>
+	</ul>
+	
+	<div class="span-8">
+		<h4>We are Becoming More Diverse</h4>
+		
+		<p>Metro Boston is changing.</p>
+		
+		<p>These demographic trends will have huge impacts on the region in decades to come, and the face of the region in 2030 will look substantially different than it did in 2010.<p>
+		
+		<ul>
+			<li>Our aging population is growing</li>
+			<li>The youngest among us our most diverse residents</li>
+			<li>We are increasingly foreign-born</li>
+		</ul>
+	</div>
+	
+	<div class="span-8 last">
+		<h4>We are Becoming Less Equal</h4>
+		<p>Inequitable income distribution and highly segregated residential patterns not only harm individuals throughout their lives, 
+			but hinder Metro Boston’s potential for equitable growth and prosperity. They are also systematic factors that underpin or 
+			exacerbate many of the other findings in this report.</p>
+		<ul>
+			<li>Income inequality is high in Metro Boston, and it’s growing.</li>
+			<li>The region is highly segregated.</li>
+			<li>Our regressive tax structure worsens income inequality.</li>
+		</ul>
+	</div>
+	
+	<h3 class="span-16 last">Inequity Impacts Us at Each Stage of Our Lives</h3>
+	
+	<div class="span-4">
+		CHILDREN as they try to grow up healthy, learn, and play.
+		
+		<p>White children and children of color rarely grow up side-by-side in Metro Boston.</p>
+	</div>
+	<div class="span-4">
+		YOUNG ADULTS as they try to learn, stay safe, and establish independence.
+		<p>Dropout rates for African American and Latino teens are vastly higher than those for whites and Asians.</p>
+	</div>
+	<div class="span-4">
+		ADULTS as they try to make a good living, build a home, and stay healthy
+		<p>About half of all renters in the region are costburdened by housing.</p>
+	</div>
+	<div class="span-4 last">
+		SENIORS as they try to remain active, retire comfortably, and stay connected.
+		<p>Grandparents raising grandchildren are especially impacted by poverty.</p>
+	</div>
 		  			
 {% endblock %}
