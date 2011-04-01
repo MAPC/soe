@@ -84,6 +84,7 @@ class Meta(models.Model):
     
     # So the model is pluralized correctly in the admin.
     class Meta:
+        ordering = ['title']
         verbose_name_plural = 'Meta'
 
     # Returns the string representation of the model.

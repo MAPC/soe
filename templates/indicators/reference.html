@@ -19,13 +19,14 @@ Reference {{ reference.number }} |
 
 <ul>
 	
-	<li class="active"><a href="{{ base_url }}references/" title="References">References</a></li>
-	
 {% for menu_item in meta_items %}
 	
 		<li><a href="{{ base_url }}references/{{ menu_item.slug }}" title="{{ menu_item.title }}">{{ menu_item.title }}</a></li>
 	
 {% endfor %}
+
+		<li class="active"><a href="{{ base_url }}references/" title="References">References</a></li>
+		
 </ul>
 			
 {% endblock %}

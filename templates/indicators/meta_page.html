@@ -19,8 +19,6 @@
 
 <ul>
 	
-	<li><a href="{{ base_url }}references/" title="References">References</a></li>
-	
 {% for menu_item in meta_items %}
 
 	{% if menu_item.id == meta_page.id %}
@@ -34,6 +32,9 @@
 	{% endif %}
 	
 {% endfor %}
+
+	<li><a href="{{ base_url }}references/" title="References">References</a></li>
+
 </ul>
 			
 {% endblock %}
