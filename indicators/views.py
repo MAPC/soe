@@ -61,7 +61,19 @@ def reference(request, ref_id):
                                                         'base_url': settings.BASE_URL,}, 
                                                         context_instance=RequestContext(request))
     
-def references(request):
+def references_index(request):
+    
+    topicareas = TopicArea.objects.filter(pub=True).order_by('order')
+    
+    meta_pages = Meta.objects.all()
+    
+    return render_to_response('indicators/references_index.html', {
+                                                        'meta_items': meta_pages,
+                                                        'topicareas': topicareas,
+                                                        'base_url': settings.BASE_URL,}, 
+                                                        context_instance=RequestContext(request))
+    
+def references_list(request):
     
     topicareas = TopicArea.objects.filter(pub=True).order_by('order')
     
@@ -69,7 +81,7 @@ def references(request):
     
     meta_pages = Meta.objects.all()
     
-    return render_to_response('indicators/references.html', {
+    return render_to_response('indicators/references_list.html', {
                                                         'references': references,
                                                         'meta_items': meta_pages,
                                                         'topicareas': topicareas,

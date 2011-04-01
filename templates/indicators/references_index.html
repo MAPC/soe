@@ -3,13 +3,13 @@
 
 {% block title %}
 
-{{ meta_page.title }} | 
+References | 
 
 {% endblock %}
 
 {% block indicator_title %}
 
-	<h2 class="references"><span>{{ meta_page.title }}</span></h2>
+	<h2 class="references"><span>Reference and Navigation</span></h2>
 
 {% endblock %}
 
@@ -20,27 +20,18 @@
 <ul>
 	
 {% for menu_item in meta_items %}
-
-	{% if menu_item.id == meta_page.id %}
-	
-		<li class="active"><a href="{{ base_url }}references/{{ menu_item.slug }}" title="{{ menu_item.title }}">{{ menu_item.title }}</a></li>
-	
-	{% else %}
 	
 		<li><a href="{{ base_url }}references/{{ menu_item.slug }}" title="{{ menu_item.title }}">{{ menu_item.title }}</a></li>
 	
-	{% endif %}
-	
 {% endfor %}
 
-	<li><a href="{{ base_url }}references/list/" title="References">References</a></li>
-
+		<li><a href="{{ base_url }}references/list/" title="References">References</a></li>
 </ul>
 			
 {% endblock %}
 
 {% block nocol %}
-	
-	{{ meta_page.content|safe }}
+
+	Use the left sidebar to find information on references, racial/ethnic categories used and their limitations, data sources,  glossary, and a guide to geographies.
 		  			
 {% endblock %}
