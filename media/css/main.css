@@ -39,7 +39,7 @@ h2.economy {
 h2.education {
 	background: #f4f4f5 url("/soe/media/img/nav-education.png") no-repeat;
 }
-h2.environment-and-recreation {
+h2.environment {
 	background: #f4f4f5 url("/soe/media/img/nav-environment.png") no-repeat;
 }
 h2.housing {
@@ -173,12 +173,10 @@ div.notice p {
 	background: #1186b1 url("/soe/media/img/nav-education.png") no-repeat;
 }
 
-#menu h4.environment-and-recreation {
+#menu h4.environment {
 	background: #fff url("/soe/media/img/nav-environment.png") no-repeat;
-	height: 28px;
-	padding-top: 6px;
 }
-#menu h4.environment-and-recreation:hover, #menu h4.environment-and-recreation.active {
+#menu h4.environment:hover, #menu h4.environment.active {
 	background: #98b901 url("/soe/media/img/nav-environment.png") no-repeat;
 }
 
