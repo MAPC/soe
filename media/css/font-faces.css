@@ -6,3 +6,9 @@ font-family: 'AktivGrotesk_Regular';
 src: url( 'http://fnt.webink.com/wfs/?drawer=E5785D29-D213-498A-99B7-6A68A0682816&font=35439AB4-AE5C-6414-19AF-3BEAA3F5D579');
 font-weight:normal;font-style:normal;font-variant:normal;
 }
+
+@font-face{
+font-family: 'AktivGrotesk_Light';
+src: url( 'http://fnt.webink.com/wfs/?drawer=E5785D29-D213-498A-99B7-6A68A0682816&font=5DD1A08F-E08C-456F-FB29-61CA507CEAB4');
+font-weight:normal;font-style:normal;font-variant:normal;
+}

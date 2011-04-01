@@ -320,10 +320,47 @@ h4.reference {
 	margin-bottom: 0px;
 }
 
+/* index page */
+
 p.index.quote {
 	padding-top: 30px;
 	line-height: 22px;
 	font-size: 14px;
+}
+
+h3.index {
+	background-color: #668290;
+	color: #fff;
+	font-family: AktivGrotesk_Light, Verdana, sans-serif;
+	padding: 6px 0 10px 6px;
+	font-size: 20px;
+}
+
+/* lifestages */
+
+.lifestage h4 {
+	color: #fff;
+	font-size: 12px;
+	padding: 4px;
+	height: 60px;
+	text-align: center;
+}
+
+.lifestage.children h4 {
+	background-color: #881679;
+}
+.lifestage.youngadults h4 {
+	background-color: #64a137;
+}
+.lifestage.adults h4 {
+	background-color: #d17a18;
+}
+.lifestage.seniors h4 {
+	background-color: #007697;
+}
+
+.lifestage .graph img {
+	margin-bottom: 12px;
 }
 
 /* override jquery lightbox */
