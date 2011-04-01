@@ -1,7 +1,7 @@
 from PIL import Image
 import glob, os
 
-size = 268, 536
+size = 270, 540
 
 for infile in glob.glob("graphs/*"):
 	file, ext = os.path.splitext(infile)
@@ -11,4 +11,4 @@ for infile in glob.glob("graphs/*"):
 			format = "JPEG"
 		im = Image.open(infile)
 		im.thumbnail(size, Image.ANTIALIAS)
-		im.save(file + ".268x536" + ext, format)
+		im.save(file + ".270x540" + ext, format)
