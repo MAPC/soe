@@ -8,13 +8,13 @@ html {
 } 
 
 body {
-	background: url("/soe/media/img/bg-body.png");
+	background: url("../img/bg-body.png");
 	color: #222;
 	font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 
 #main {
-	background: url("/soe/media/img/bg-main.png") repeat-y;
+	background: url("../img/bg-main.png") repeat-y;
 }
 
 h2 {
@@ -30,34 +30,34 @@ h2 {
 }
 
 h2.demographics {
-	background: #f4f4f5 url("/soe/media/img/nav-demographics.png") no-repeat;
+	background: #f4f4f5 url("../img/nav-demographics.png") no-repeat;
 }
 h2.economy {
-	background: #f4f4f5 url("/soe/media/img/nav-economy.png") no-repeat;
+	background: #f4f4f5 url("../img/nav-economy.png") no-repeat;
 }
 h2.education {
-	background: #f4f4f5 url("/soe/media/img/nav-education.png") no-repeat;
+	background: #f4f4f5 url("../img/nav-education.png") no-repeat;
 }
 h2.environment {
-	background: #f4f4f5 url("/soe/media/img/nav-environment.png") no-repeat;
+	background: #f4f4f5 url("../img/nav-environment.png") no-repeat;
 }
 h2.housing {
-	background: #f4f4f5 url("/soe/media/img/nav-housing.png") no-repeat;
+	background: #f4f4f5 url("../img/nav-housing.png") no-repeat;
 }
 h2.public-health {
-	background: #f4f4f5 url("/soe/media/img/nav-public-health.png") no-repeat;
+	background: #f4f4f5 url("../img/nav-public-health.png") no-repeat;
 }
 h2.public-safety {
-	background: #f4f4f5 url("/soe/media/img/nav-public-safety.png") no-repeat;
+	background: #f4f4f5 url("../img/nav-public-safety.png") no-repeat;
 }
 h2.transportation {
-	background: #f4f4f5 url("/soe/media/img/nav-transportation.png") no-repeat;
+	background: #f4f4f5 url("../img/nav-transportation.png") no-repeat;
 }
 h2.civic-vitality {
-	background: #f4f4f5 url("/soe/media/img/nav-civic-vitality.png") no-repeat;
+	background: #f4f4f5 url("../img/nav-civic-vitality.png") no-repeat;
 }
 h2.references {
-	background: #f4f4f5 url("/soe/media/img/nav-references.png") no-repeat;
+	background: #f4f4f5 url("../img/nav-references.png") no-repeat;
 	margin-bottom: 42px;
 }
 
@@ -80,23 +80,23 @@ a, a:hover, a:active, a:visited {
 }
 
 a[target="_blank"] { 
-	background: url("/soe/media/img/icon_external.png") center right no-repeat;
+	background: url("../img/icon_external.png") center right no-repeat;
 	padding: 5px 20px 5px 0;
 }
 
 a[href$='.xls'] {
 	padding: 5px 20px 5px 0;
-	background: transparent url("/soe/media/img/icon_xls.png") no-repeat center right;
+	background: transparent url("../img/icon_xls.png") no-repeat center right;
 }
 
 a[href$='.pdf'] { 
 	padding: 5px 20px 5px 0;
-	background: transparent url("/soe/media/img/icon_pdf.png") no-repeat center right;
+	background: transparent url("../img/icon_pdf.png") no-repeat center right;
 }
 
 a[href$='.doc'] { 
 	padding: 5px 20px 5px 0;
-	background: transparent url("/soe/media/img/icon_doc.png") no-repeat center right;
+	background: transparent url("../img/icon_doc.png") no-repeat center right;
 }
 
 .loginfo {
@@ -117,7 +117,7 @@ a[href$='.doc'] {
 
 #masthead {
 	height: 147px;
-	background: url("/soe/media/img/masthead.png") no-repeat;
+	background: url("../img/masthead.png") no-repeat;
 	margin-bottom: 17px;
 }
 
@@ -152,75 +152,75 @@ div.notice p {
 }
 
 #menu h4.demographics {
-	background: #fff url("/soe/media/img/nav-demographics.png") no-repeat;
+	background: #fff url("../img/nav-demographics.png") no-repeat;
 }
 #menu h4.demographics:hover, #menu h4.demographics.active {
-	background: #9358e1 url("/soe/media/img/nav-demographics.png") no-repeat;
+	background: #9358e1 url("../img/nav-demographics.png") no-repeat;
 }
 
 #menu h4.economy {
-	background: #fff url("/soe/media/img/nav-economy.png") no-repeat;
+	background: #fff url("../img/nav-economy.png") no-repeat;
 }
 #menu h4.economy:hover, #menu h4.economy.active {
-	background: #ebc900 url("/soe/media/img/nav-economy.png") no-repeat;
+	background: #ebc900 url("../img/nav-economy.png") no-repeat;
 }
 
 #menu h4.education {
-	background: #fff url("/soe/media/img/nav-education.png") no-repeat;
+	background: #fff url("../img/nav-education.png") no-repeat;
 }
 #menu h4.education:hover, #menu h4.education.active {
-	background: #1186b1 url("/soe/media/img/nav-education.png") no-repeat;
+	background: #1186b1 url("../img/nav-education.png") no-repeat;
 }
 
 #menu h4.environment {
-	background: #fff url("/soe/media/img/nav-environment.png") no-repeat;
+	background: #fff url("../img/nav-environment.png") no-repeat;
 }
 #menu h4.environment:hover, #menu h4.environment.active {
-	background: #98b901 url("/soe/media/img/nav-environment.png") no-repeat;
+	background: #98b901 url("../img/nav-environment.png") no-repeat;
 }
 
 #menu h4.housing {
-	background: #fff url("/soe/media/img/nav-housing.png") no-repeat;
+	background: #fff url("../img/nav-housing.png") no-repeat;
 }
 #menu h4.housing:hover, #menu h4.housing.active {
-	background: #b07123 url("/soe/media/img/nav-housing.png") no-repeat;
+	background: #b07123 url("../img/nav-housing.png") no-repeat;
 }
 
 #menu h4.public-health {
-	background: #fff url("/soe/media/img/nav-public-health.png") no-repeat;
+	background: #fff url("../img/nav-public-health.png") no-repeat;
 }
 #menu h4.public-health:hover, #menu h4.public-health.active {
-	background: #df3c1f url("/soe/media/img/nav-public-health.png") no-repeat;
+	background: #df3c1f url("../img/nav-public-health.png") no-repeat;
 }
 
 #menu h4.public-safety {
-	background: #fff url("/soe/media/img/nav-public-safety.png") no-repeat;
+	background: #fff url("../img/nav-public-safety.png") no-repeat;
 }
 #menu h4.public-safety:hover, #menu h4.public-safety.active {
-	background: #4e6cee url("/soe/media/img/nav-public-safety.png") no-repeat;
+	background: #4e6cee url("../img/nav-public-safety.png") no-repeat;
 }
 
 #menu h4.transportation {
-	background: #fff url("/soe/media/img/nav-transportation.png") no-repeat;
+	background: #fff url("../img/nav-transportation.png") no-repeat;
 }
 #menu h4.transportation:hover, #menu h4.transportation.active {
-	background: #469a93 url("/soe/media/img/nav-transportation.png") no-repeat;
+	background: #469a93 url("../img/nav-transportation.png") no-repeat;
 }
 
 #menu h4.civic-vitality {
-	background: #fff url("/soe/media/img/nav-civic-vitality.png") no-repeat;
+	background: #fff url("../img/nav-civic-vitality.png") no-repeat;
 }
 #menu h4.civic-vitality:hover, #menu h4.civic-vitality.active {
-	background: #dda400 url("/soe/media/img/nav-civic-vitality.png") no-repeat;
+	background: #dda400 url("../img/nav-civic-vitality.png") no-repeat;
 }
 
 #menu h4.references {
-	background: #fff url("/soe/media/img/nav-references.png") no-repeat;
+	background: #fff url("../img/nav-references.png") no-repeat;
 	height: 28px;
 	padding-top: 6px;
 }
 #menu h4.references:hover, #menu h4.references.active {
-	background: #aab2b4 url("/soe/media/img/nav-references.png") no-repeat;
+	background: #aab2b4 url("../img/nav-references.png") no-repeat;
 }
 
 #menu h4 a, #menu ul li a {
@@ -307,26 +307,44 @@ h4.reference {
 /* index page */
 
 p.index.quote {
+	font-family: MuseoSans_300Italic, Arial, Helvetica, sans-serif;
 	padding-top: 30px;
 	line-height: 22px;
-	font-size: 14px;
+	font-size: 15px;
+	color: #333333;
 }
 
 h3.index {
 	background-color: #668290;
 	color: #fff;
-	font-family: AktivGrotesk_Light, Verdana, sans-serif;
+	font-family: MuseoSans_300,  Arial, Helvetica, sans-serif;
 	padding: 6px 0 10px 6px;
 	font-size: 20px;
+}
+
+h4.index {
+	color: #004990;
+	font-family: MuseoSans_300, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+}
+
+.index.caption {
+	font-family: MuseoSans_500, Arial, Helvetica, sans-serif;
+}
+
+img.index {
+	float: left;
+	margin-right: 8px;
 }
 
 /* lifestages */
 
 .lifestage h4 {
 	color: #fff;
-	font-size: 12px;
-	padding: 4px;
-	height: 60px;
+	font-family: MuseoSans_300, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	padding: 5px;
+	height: 72px;
 	text-align: center;
 }
 
