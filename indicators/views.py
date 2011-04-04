@@ -20,8 +20,11 @@ def topicarea(request, topicarea_slug):
     # FIXME: query existing topicareas objects instead
     active_topicarea = TopicArea.objects.get(slug=topicarea_slug)
     
+    indicators = Indicator.objects.filter(pub=True, topicarea=active_topicarea).order_by('order')
+    
     return render_to_response('indicators/topicarea.html', {
                                                         'topicareas': topicareas,
+                                                        'indicators': indicators,
                                                         'active_topicarea': active_topicarea,
                                                         'base_url': settings.BASE_URL, }, 
                                                         context_instance=RequestContext(request))
@@ -34,12 +37,15 @@ def indicator(request, topicarea_slug, indicator_slug):
     active_topicarea = TopicArea.objects.get(slug=topicarea_slug)
     active_indicator = Indicator.objects.get(slug=indicator_slug)
     
+    indicators = Indicator.objects.filter(pub=True, topicarea=active_topicarea).order_by('order')
+    
     related_objects = active_indicator.tags.similar_objects()
     
     # return HttpResponse('OK')
 
     return render_to_response('indicators/indicator.html', {
                                                         'topicareas': topicareas,
+                                                        'indicators': indicators,
                                                         'active_topicarea': active_topicarea,
                                                         'active_indicator': active_indicator,
                                                         'related_objects': related_objects,
