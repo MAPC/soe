@@ -1,8 +1,12 @@
 $(document).ready(function() {	
 	
-	// fix height
+	// fix height and footer position (FIXME: UI.position on #main)
 	if ($("#main").height() < $(window).height()) { 
-		$("#main").height($(window).height()); 
+		$("#main").height($(window).height(), function () {console.log("done")} );
+		
+		$("#footer").css({
+		 	"margin-top": $("#main").height() - $("#content").height() - 54
+		});
 	}
 	
 	// lightbox on graphs 
@@ -14,7 +18,7 @@ $(document).ready(function() {
 		
 		var $graphhint = $("<div class='graphhint'>click to enlarge</div>");
 		
-		$("#imagecol").append($graphhint);
+		$("#imagecol").append($graphhint);	
 		
 		$graphhint
 		.width($(this).width())
