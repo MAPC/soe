@@ -304,6 +304,10 @@ h4.reference {
 	margin-bottom: 0px;
 }
 
+#footer {
+	text-align: right;
+}
+
 /* index page */
 
 p.index.quote {
@@ -312,6 +316,7 @@ p.index.quote {
 	line-height: 22px;
 	font-size: 15px;
 	color: #333333;
+	font-style: italic;
 }
 
 h3.index {
@@ -335,6 +340,10 @@ h4.index {
 img.index {
 	float: left;
 	margin-right: 8px;
+}
+
+.index.small {
+	text-align: right;
 }
 
 /* lifestages */
