@@ -1,6 +1,6 @@
 # Django settings for soe project.
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -19,8 +19,6 @@ DATABASES = {
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
-
-# C:\dev\django\soe\db\soe.sqlite
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -47,17 +45,7 @@ USE_L10N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = 'C:/dev/django/soe/media/'
-
-# URL that handles the media served from MEDIA_ROOT. Make sure to use a
-# trailing slash if there is a path component (optional in other cases).
-# Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = 'http://localhost/soe/media/'
-
-# URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
-# trailing slash.
-# Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = 'http://localhost/soe/media/admin/'
+MEDIA_ROOT = '/media/'
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '8y90id83ng0-z++02x4e!z$w69)+bj0a3pn1z@bh#uvx!797p2'
@@ -75,7 +63,6 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-	'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
 ROOT_URLCONF = 'soe.urls'
@@ -84,7 +71,6 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    'C:/dev/django/soe/templates'
 )
 
 INSTALLED_APPS = (
@@ -95,14 +81,36 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
-    'soe.indicators',
+    'indicators',
     'tinymce',
  	'south',
     'taggit',
 )
 
-# TinyMCE config 
+# import local settings
+try:
+    from local_settings import *
+except ImportError:
+    pass
 
+# base url for server sub directory
+# FIXME: this is ridicolous, solve in urls.py with next update
+if DEBUG == True:
+    BASE_URL = '/'
+else:
+    BASE_URL = '/equity/'
+
+# URL that handles the media served from MEDIA_ROOT. Make sure to use a
+# trailing slash if there is a path component (optional in other cases).
+# Examples: "http://media.lawrence.com", "http://example.com/media/"
+MEDIA_URL = BASE_URL + 'media/'
+
+# URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
+# trailing slash.
+# Examples: "http://foo.com/media/", "/media/".
+ADMIN_MEDIA_PREFIX = BASE_URL + 'admin_media/'
+
+# TinyMCE config 
 # http://wiki.moxiecode.com/index.php/TinyMCE:Configuration
 TINYMCE_DEFAULT_CONFIG = {
     'theme': "advanced", 
@@ -122,28 +130,3 @@ TINYMCE_DEFAULT_CONFIG = {
 #        {'title' : 'notice', 'block' : 'div'}
 #    ]
 }
-
-BASE_URL = '/soe/'
-
-# django-debug-toolbar
-INTERNAL_IPS = ('127.0.0.1',)
-DEBUG_TOOLBAR_CONFIG = {
-    'INTERCEPT_REDIRECTS': False,
-}
-DEBUG_TOOLBAR_PANELS = (
-    'debug_toolbar.panels.version.VersionDebugPanel',
-    'debug_toolbar.panels.timer.TimerDebugPanel',
-    'debug_toolbar.panels.settings_vars.SettingsVarsDebugPanel',
-    'debug_toolbar.panels.headers.HeaderDebugPanel',
-    'debug_toolbar.panels.request_vars.RequestVarsDebugPanel',
-    'debug_toolbar.panels.template.TemplateDebugPanel',
-    'debug_toolbar.panels.sql.SQLDebugPanel',
-    'debug_toolbar.panels.signals.SignalDebugPanel',
-    'debug_toolbar.panels.logger.LoggingPanel',
-)
-
-# import local settings
-try:
-    from settings_local import *
-except ImportError:
-    pass
